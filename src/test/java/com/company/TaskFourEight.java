@@ -22,7 +22,7 @@ public class TaskFourEight {
                 for (int m = 1; m <= 12; m++) {
                     System.out.println("Podaj liczbę opadów dla " + m + " miesiąca w cm.");
                     monthInput = keyboard.nextFloat();
-                    if (monthInput < 0.0) {
+                    if (monthInput < 0) {
                         System.out.println("Wartość opadów nie może być ujemna.");
                         monthInput = keyboard.nextFloat();
                     } else {
