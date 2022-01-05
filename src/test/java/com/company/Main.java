@@ -20,15 +20,15 @@ public class Main {
         word = JOptionPane.showInputDialog("Podaj wyraz:");
         System.out.println(word);
 
+        char[] wordTable = word.toCharArray();
+        System.out.println("this is word table " + wordTable);
+
         System.exit(0);
         //change string to char table
 
 
-        /*char[] wordTable = word.toCharArray();
-        System.out.println("this is word table " + wordTable);*/
-
         /*for(int i=0; i <= word.length(); i++) {
-            if (word.valueOf(i).equals (firstTable[i]))
+            if (word.valueOf(i).equals(firstTable[i]))
             {
                 sam.append(word.valueOf(i));
             }
