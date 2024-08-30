@@ -1,6 +1,5 @@
 package com.company.TasksSeven;
 
-
 import java.util.Scanner;
 
 public class RainFall {
@@ -16,7 +15,7 @@ public class RainFall {
         double rainValue;
         for(int i = 0; i < table.length; i++){
             do{
-                System.out.printf("Podaj wartość opadów dla %s miesiąca", i+1);
+                System.out.printf("Podaj wartość opadów dla %s miesiąca ", i+1);
                 rainValue = keyboard.nextDouble();
                 if(rainValue<0){
                     System.out.println("Wprowadzono niepoprawną wartość. Wpisana wartość nie może być mniejsza od 0");
@@ -36,8 +35,7 @@ public class RainFall {
     }
 
     public double getAverageRainFallValue(){
-        double avgOfRain = 0.0;
-        avgOfRain = getSumOfRainFall()/table.length;
+        double avgOfRain = getSumOfRainFall()/table.length;
         return avgOfRain;
     }
 
@@ -45,25 +43,25 @@ public class RainFall {
         int month = 0;
         double monthValue = 0.0;
 
-        for (int i=0; i < table.length; i++){
-            if(table[i]>monthValue){
-                month = i;
+        for(int i=0; i < table.length; i++){
+            if(table[i]>monthValue) {
+                monthValue = table[i];
+                month = i + 1;
             }
         }
-
         return month;
     }
 
     public int getTheMostDryMonth(){
         int month = 0;
-        double monthValue = 0.0;
+        double monthValue = table[0];
 
-        for (int i=0; i < table.length; i++){
-            if(table[i]<monthValue){
-                month = i;
+        for(int i=0; i < table.length; i++){
+            if(table[i]<= monthValue){
+                monthValue = table[i];
+                month = i +1;
             }
         }
-
         return month;
     }
 
